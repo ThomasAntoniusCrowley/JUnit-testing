@@ -67,10 +67,13 @@ private List<Card> testCards;
 		
 	}
 	
-	@Test public void testFailedAdd()
+	@Test(expected=IllegalArgumentException.class)
+	public void testFailedAdd()
 	{
-		//to check that dding a card fails by throwing IllegalArgumentException
+		//to check that adding a card fails by throwing IllegalArgumentException
 		//when the cards already in the deck
+		testDeck = new Deck();
+		testDeck.add(twoClubs);
 	
 	}
 
