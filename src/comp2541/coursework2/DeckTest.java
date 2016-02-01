@@ -2,15 +2,24 @@ package comp2541.coursework2;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 
-public class DeckTest {
+
+
+public class DeckTest 
+{
 	
+private Deck testDeck;	
+private int deckSize;
+
 	@Test public void testCreation()
 	{
 		//check that a 52 card deck is created
-		Deck testDeck = new Deck();
-		int deckSize = testDeck.size();
+		testDeck = new Deck();
+		deckSize = testDeck.size();
 		
 		assertEquals("Cards:", 52, deckSize);
 		
@@ -19,11 +28,25 @@ public class DeckTest {
 	@Test public  void testContains()
 	{
 		// check that the contains method works
+		List<Card> cards = new ArrayList<Card>();
+		Card aceClubs = new Card("AC");
+		Card twoClubs = new Card("2C");
+		cards.add(aceClubs);
+		
+	//	boolean T = contains(aceClubs);
 	}
 	
 	@Test public void testDeal()
 	{
 		//check deal removes the expected card and reduces the size of the deck
+		testDeck = new Deck();
+		deckSize = testDeck.size();
+		testDeck.deal();
+		int newSize = testDeck.size();
+		int diff = deckSize - newSize;
+		
+		assertEquals("Difference:", 1, diff);
+		
 	}
 	
 	@Test public void testAdd()
