@@ -1,6 +1,6 @@
 package comp2541.coursework2;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,12 +28,15 @@ private int deckSize;
 	@Test public  void testContains()
 	{
 		// check that the contains method works
-		List<Card> cards = new ArrayList<Card>();
+		List<Card> testCards = new ArrayList<Card>();
 		Card aceClubs = new Card("AC");
 		Card twoClubs = new Card("2C");
-		cards.add(aceClubs);
+		testCards.add(aceClubs);
+		assertTrue(testCards.contains(aceClubs));
+		assertFalse(testCards.contains(twoClubs));
 		
-	//	boolean T = contains(aceClubs);
+		
+	
 	}
 	
 	@Test public void testDeal()
