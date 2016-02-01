@@ -78,4 +78,5 @@ public class CardTest
     assertThat(twoDiamonds.getImage(), not(equalTo(null)));
     assertThat(kingSpades.getImage(), not(equalTo(null)));
   }
+
 }
