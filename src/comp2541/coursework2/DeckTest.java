@@ -1,5 +1,7 @@
 package comp2541.coursework2;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 public class DeckTest {
@@ -7,8 +9,13 @@ public class DeckTest {
 	@Test public void testCreation()
 	{
 		//check that a 52 card deck is created
+		Deck testDeck = new Deck();
+		int deckSize = testDeck.size();
+		
+		assertEquals("Cards:", 52, deckSize);
+		
 	}
-	
+	  
 	@Test public  void testContains()
 	{
 		// check that the contains method works
