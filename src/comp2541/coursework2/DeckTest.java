@@ -14,6 +14,9 @@ public class DeckTest
 	
 private Deck testDeck;	
 private int deckSize;
+private Card aceClubs;
+private	Card twoClubs;
+private List<Card> testCards;
 
 	@Test public void testCreation()
 	{
@@ -28,9 +31,9 @@ private int deckSize;
 	@Test public  void testContains()
 	{
 		// check that the contains method works
-		List<Card> testCards = new ArrayList<Card>();
-		Card aceClubs = new Card("AC");
-		Card twoClubs = new Card("2C");
+		testCards = new ArrayList<Card>();
+		aceClubs = new Card("AC");
+		twoClubs = new Card("2C");
 		testCards.add(aceClubs);
 		assertTrue(testCards.contains(aceClubs));
 		assertFalse(testCards.contains(twoClubs));
@@ -55,12 +58,20 @@ private int deckSize;
 	@Test public void testAdd()
 	{
 		//Check that adding a card succeeds when the card is not already present in the deck
+		testCards = new ArrayList<Card>();
+		testCards.add(aceClubs);
+		
+		assertTrue(testCards.contains(aceClubs));
+		
+		
+		
 	}
 	
 	@Test public void testFailedAdd()
 	{
 		//to check that dding a card fails by throwing IllegalArgumentException
 		//when the cards already in the deck
+	
 	}
 
 }
