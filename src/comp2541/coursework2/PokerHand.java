@@ -23,7 +23,26 @@ public class PokerHand extends CardCollection
 	    	throw new IllegalArgumentException("Hand is full");
 	    }
 	  }
-
+	 
+	 public String toString()
+	 {
+		 String handString = null;
+		 if (pokerHand.size()==0)
+		 {
+			 handString = "<empty>";
+		 }
+		 else
+		 {
+			 for (Card s : pokerHand)
+			 {
+				char cardChar = (char) (s.getRank() + s.getSuit());
+				String cardString = String.valueOf(cardChar); 
+			     handString += cardString + "\t";
+			 }
+		 }
+		 
+		 return handString;
+	 }
   
 }
   

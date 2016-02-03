@@ -1,5 +1,7 @@
 package comp2541.coursework2;
 
+import static org.junit.Assert.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,6 +50,16 @@ private Card tenHearts;
 	{
 		//check the to string method works
 		
+		assertEquals("Empty hand:", "<Empty>", testHand.toString());
+		System.out.println("Empty hand?: ");
+		System.out.println(testHand.toString());
+		testHand.add(aceClubs);
+		testHand.add(twoClubs);
+		testHand.add(twoDiamonds);
+		
+		assertEquals("Empty hand:", "AC 2C 2D", testHand.toString());
+		System.out.println("full card");
+		System.out.println(testHand.toString());
 	}
 	
 	@Test
