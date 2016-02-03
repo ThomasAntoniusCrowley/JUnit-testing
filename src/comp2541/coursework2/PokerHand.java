@@ -7,42 +7,53 @@ import java.util.List;
 public class PokerHand extends CardCollection
 {
 	//create poker hand array
-	protected List<Card> pokerHand = new ArrayList<Card>();
+	private List<Card> pokerHand; 
 
-	 public void add(Card card)
+	public PokerHand()
+	{
+		//constructor to create hand of 5 cards
+		pokerHand = new ArrayList<Card>();
+
+	}
+	
+	 public void pokerAdd(Card card)
 	  {
-	    if (contains(card)) {
+	    if (pokerHand.contains(card)) {
 	      throw new IllegalArgumentException("card already present");
 	    }
 	    if (pokerHand.size()<5)
 	    {
-	    	cards.add(card);
+	    	pokerHand.add(card);
 	    }
-	    else
+	    if (pokerHand.size()==5)
 	    {
 	    	throw new IllegalArgumentException("Hand is full");
 	    }
 	  }
 	 
-	 public String toString()
+	 public String HandToString()
 	 {
 		 String handString = null;
+		 handString += "lool";
 		 if (pokerHand.size()==0)
 		 {
 			 handString = "<empty>";
 		 }
 		 else
 		 {
-			 for (Card s : pokerHand)
-			 {
-				char cardChar = (char) (s.getRank() + s.getSuit());
-				String cardString = String.valueOf(cardChar); 
-			     handString += cardString + "\t";
-			 }
+//			 for (Card s : pokerHand)
+//			 {
+//				char cardChar = (char) (s.getRank() + s.getSuit());
+//				String cardString = String.valueOf(cardChar); 
+//			     handString += (cardString + " ");
+//			 }
+			 
+			 handString = pokerHand.toString();
 		 }
 		 
 		 return handString;
 	 }
+
   
 }
   
