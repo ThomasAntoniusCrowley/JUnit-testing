@@ -28,6 +28,8 @@
       <classpath refid="project.classpath"/>
       <formatter type="brief" usefile="false"/>
       <test name="comp2541.coursework2.CardTest"/>
+      <test name="comp2541.coursework2.DeckTest"/>
+      <test name="comp2541.coursework2.PokerHandTest"/>
     </junit>
   </target>
 
