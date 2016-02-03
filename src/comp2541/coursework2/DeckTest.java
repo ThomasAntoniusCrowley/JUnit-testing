@@ -74,7 +74,11 @@ private List<Card> testCards;
 		//when the cards already in the deck
 		testDeck = new Deck();
 		testDeck.add(twoClubs);
+		
+		
+	}
+		
 	
 	}
 
-}
+

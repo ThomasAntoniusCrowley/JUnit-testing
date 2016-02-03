@@ -31,27 +31,33 @@ public class PokerHand extends CardCollection
 	    }
 	  }
 	 
-	 public String HandToString()
+	 public String toString()
 	 {
 		 String handString = null;
-		 handString += "lool";
+		
 		 if (pokerHand.size()==0)
 		 {
 			 handString = "<empty>";
 		 }
 		 else
 		 {
-//			 for (Card s : pokerHand)
-//			 {
-//				char cardChar = (char) (s.getRank() + s.getSuit());
-//				String cardString = String.valueOf(cardChar); 
-//			     handString += (cardString + " ");
-//			 }
+			 for (Card s : pokerHand)
+			 {
+				char cardChar = (char) (s.getRank() + s.getSuit());
+				String cardString = String.valueOf(cardChar); 
+			     handString += (cardString + " ");
+			 }
 			 
 			 handString = pokerHand.toString();
 		 }
 		 
 		 return handString;
+	 }
+	 
+	 public boolean isFlush()
+	 {
+		 return true;
+		
 	 }
 
   

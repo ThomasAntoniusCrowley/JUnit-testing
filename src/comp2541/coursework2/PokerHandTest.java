@@ -46,29 +46,32 @@ private Card tenHearts;
 	}
 	
 	@Test
-	public void toStringTest()
+	public void emptyStringTest()
 	{
-		//check the to string method works
-		//System.out.println(testHand.size());
-		//assertEquals("Empty hand:", "<Empty>", testHand.toString());
-		//System.out.println("Empty hand?: ");
-		//System.out.println(testHand.HandToString());
-		testHand.add(aceClubs);
-		testHand.add(twoClubs);
-		testHand.add(twoDiamonds);
-		//System.out.println(testHand.size());
-		
-	//	assertEquals("Empty hand:", "AC 2C 2D", testHand.toString());
-		//System.out.println("full card");
-		//System.out.println(testHand.HandToString());
-		
+		//System.out.println(testHand.toString());
+		assertEquals("EmptyHand:", "<empty>", testHand.toString());	
 	} 
 	
+	@Test
+	public void stringTest()
+	{
+		testHand.pokerAdd(aceClubs);
+		testHand.pokerAdd(twoClubs);
+		testHand.pokerAdd(twoDiamonds);
+		System.out.println(testHand.toString());
+		assertEquals("three cards:", "AC, 2C, 2D", testHand.toString());
+	}
 	@Test
 	public void flushTest()
 	{
 		//check the isFlush method works
 	
+	}
+	
+	@Test
+	public void threeOfKindTest()
+	{
+		
 	}
 	
 	
