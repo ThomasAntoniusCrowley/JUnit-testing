@@ -41,9 +41,9 @@ public class PokerHand extends CardCollection
 		 }
 		 else
 		 {
-			 for (Card s : pokerHand)
+			 for (Card c : pokerHand)
 			 {
-				char cardChar = (char) (s.getRank() + s.getSuit());
+				char cardChar = (char) (c.getRank() + c.getSuit());
 				String cardString = String.valueOf(cardChar); 
 			     handString += (cardString + " ");
 			 }
@@ -56,8 +56,27 @@ public class PokerHand extends CardCollection
 	 
 	 public boolean isFlush()
 	 {
-		 return true;
-		
+		 Card firstCard = pokerHand.get(0);
+		 char suit = firstCard.getSuit();
+		 int count =0 ;
+		 for (Card c : pokerHand)
+		 {
+			if (suit == c.getSuit())
+			{
+				count += 1;
+			}
+			
+			
+		 }
+		 if (count == 5)
+		 {
+			 return true;
+		 }
+		 
+		 else 
+		 {
+			 return false;
+		 }
 	 }
 
   
