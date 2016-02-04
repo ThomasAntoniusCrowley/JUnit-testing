@@ -79,6 +79,83 @@ public class PokerHand extends CardCollection
 		 }
 	 }
 
-  
+	 public boolean hasThreeOfAKind()
+	 {
+		 Card firstCard = pokerHand.get(0);
+		 char value = firstCard.getRank();
+		 int count =0 ;
+		 for (Card c : pokerHand)
+		 {
+			if (value == c.getRank())
+			{
+				count += 1;
+			}
+			
+			
+		 }
+		 if (count == 3)
+		 {
+			 return true;
+		 }
+		 
+		 else 
+		 {
+			 return false;
+		 }
+	 }
+	 
+	 public boolean hasFourOfAKind()
+	 {
+		 Card firstCard = pokerHand.get(0);
+		 char value = firstCard.getRank();
+		 int count =0 ;
+		 for (Card c : pokerHand)
+		 {
+			if (value == c.getRank())
+			{
+				count += 1;
+			}
+			
+			
+		 }
+		 if (count == 4)
+		 {
+			 return true;
+		 }
+		 
+		 else 
+		 {
+			 return false;
+		 }
+	 }
+	 
+	 
+	 public boolean hasFiveOfAKind()
+	 {
+		 Card firstCard = pokerHand.get(0);
+		 char value = firstCard.getRank();
+		 int count =0 ;
+		 for (Card c : pokerHand)
+		 {
+			if (value == c.getRank())
+			{
+				count += 1;
+			}
+			
+			
+		 }
+		 if (count == 5)
+		 {
+			 return true;
+		 }
+		 
+		 else 
+		 {
+			 return false;
+		 }
+	 }
+	 
+	 
+	 
 }
   
